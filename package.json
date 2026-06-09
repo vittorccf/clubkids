@@ -1,0 +1,15 @@
+{
+  "name": "clubkids-cluby-pride",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing de divulgação. Club Kids apresenta Cluby Pride e Vita's House. Goiânia, 20.06.2026.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
