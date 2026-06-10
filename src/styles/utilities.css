@@ -1,0 +1,34 @@
+/* ============================================================
+   UTILITARIOS . classes reaproveitaveis entre secoes
+   ------------------------------------------------------------
+   Padroes de UI usados em mais de um lugar: animacao de entrada,
+   rotulos, cabecalho de secao numerado e botoes.
+   ============================================================ */
+
+/* --- Reveal: animacao de entrada ao rolar --- */
+/* Estado inicial (escondido/deslocado). O JS adiciona .is-in quando o
+   elemento entra na viewport; o navegador anima a transicao. */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+.reveal.is-in { opacity: 1; transform: none; }
+
+/* --- Rotulo (kicker): texto pequeno em caixa alta acima dos titulos --- */
+.kicker { font-size: var(--step--1); letter-spacing: .26em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+
+/* --- Cabecalho de secao: numero serifado + titulo, com filete embaixo --- */
+.sec-head { display: flex; align-items: baseline; gap: 1rem; padding-bottom: 1.4rem; margin-bottom: clamp(1.6rem, 4vw, 3rem); border-bottom: 1px solid var(--line); }
+.sec-head__num { font-family: var(--font-display); font-style: italic; color: var(--red-text); font-size: var(--step-1); }
+.sec-head__title { font-family: var(--font-display); font-weight: 900; font-size: var(--step-2); line-height: 1; letter-spacing: .005em; }
+
+/* --- Botoes --- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  font-family: var(--font-text); font-weight: 700; font-size: var(--step-0);
+  text-transform: uppercase; letter-spacing: .08em; line-height: 1;
+  padding: 1rem 1.6rem; border: 1px solid var(--ink); border-radius: var(--r);
+  cursor: pointer; transition: background .25s, color .25s, border-color .25s;
+}
+.btn--primary { background: var(--ink); color: #0B0B0B; }                       /* CTA solido */
+.btn--primary:hover { background: var(--red); border-color: var(--red); color: #fff; } /* unico hover que usa o vermelho */
+.btn--ghost { background: transparent; border-color: var(--line); color: var(--ink); } /* CTA secundario */
+.btn--ghost:hover { border-color: var(--ink); }
+.btn--xl { font-size: var(--step-1); padding: 1.15rem 2.4rem; }                 /* variante grande (ingressos) */

@@ -1,0 +1,57 @@
+/* ============================================================
+   BASE . reset, elementos globais, acessibilidade e textura
+   ------------------------------------------------------------
+   Normalizacao minima + estilos de elementos crus + as duas
+   camadas de textura (grao e vinheta) que dao o ar de "scan
+   editorial" sobre tudo.
+   ============================================================ */
+
+/* --- Reset enxuto (box-model previsivel, sem margens herdadas) --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;        /* navegacao por ancoras suave */
+  -webkit-text-size-adjust: 100%; /* evita inflar fonte no mobile landscape */
+}
+
+/* Respeita quem pediu menos movimento: desliga scroll suave e anima quase nada. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden; /* trava rolagem horizontal causada por elementos rotacionados/marquee */
+}
+
+img { display: block; max-width: 100%; height: auto; } /* imagens fluidas por padrao */
+a { color: inherit; text-decoration: none; }
+strong { font-weight: 700; }
+.muted { color: var(--muted); }
+
+/* --- Acessibilidade --- */
+/* Atalho "pular para ingressos": invisivel ate receber foco via teclado. */
+.skip-link { position: absolute; left: -999px; top: 0; z-index: 999; background: var(--ink); color: #000; padding: .8rem 1.2rem; font-weight: 700; }
+.skip-link:focus { left: 0; }
+/* Anel de foco visivel e consistente (so para navegacao por teclado). */
+:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+
+/* --- Textura global (estetica de revista escaneada) --- */
+/* Grao: ruido fractal em SVG inline, fixo na viewport, em blend overlay. */
+.grain {
+  position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: .12;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+/* Vinheta: escurece as bordas para focar o olhar no centro. */
+.vignette { position: fixed; inset: 0; z-index: 1; pointer-events: none; box-shadow: inset 0 0 220px 60px rgba(0,0,0,.9); }

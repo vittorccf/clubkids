@@ -1,13 +1,27 @@
 # -*- coding: utf-8 -*-
-"""Assets da landing Club Kids / Cluby Pride (estetica P&B editorial).
-Recorta a estrela, otimiza fotos e o flyer, e gera a imagem OG em preto e branco."""
+"""Pipeline de assets da landing Club Kids / Cluby Pride (estetica P&B editorial).
+
+Ferramenta de desenvolvimento (nao entra no build do site). A partir das
+fotos originais em ../references, gera os assets otimizados em ../public:
+recorta a estrela do logo, otimiza fotos e flyer, e desenha a imagem OpenGraph
+e os favicons em preto e branco.
+
+Uso:
+    pip install pillow
+    python tools/build_assets.py   # rode a partir da raiz do projeto (site/)
+
+Requer Windows pelas fontes do sistema (C:/Windows/Fonts) usadas na imagem OG.
+"""
 import os
 from PIL import Image, ImageDraw, ImageFont, ImageChops
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
-REF = os.path.join(ROOT, "..", "references")
-IMG = os.path.join(ROOT, "public", "img")
-PUB = os.path.join(ROOT, "public")
+# Caminhos derivados da localizacao deste arquivo (tools/), nao do CWD,
+# para que o script funcione independente de onde for invocado.
+TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(TOOLS_DIR)              # raiz do projeto (site/)
+REF = os.path.join(ROOT, "..", "references")   # fotos originais (fora do projeto)
+PUB = os.path.join(ROOT, "public")             # assets publicados
+IMG = os.path.join(PUB, "img")
 os.makedirs(IMG, exist_ok=True)
 
 RED = (232, 25, 63)

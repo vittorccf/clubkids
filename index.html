@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#0B0B0B" />
 
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2845090995664154');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel -->
+
   <title>Cluby Pride . Vita's House | Club Kids Goiânia . 20.06.2026</title>
   <meta name="description" content="Cluby Pride e Vita's House. A clubkids invade a casa da Vita. Sábado, 20 de junho de 2026, das 22h às 06h, no Vernissage Club, Goiânia. Festa eletrônica underground LGBT, 18+. Ingressos pela Shotgun." />
 
@@ -68,7 +83,18 @@
   </script>
 </head>
 <body>
+  <!--
+    Os links externos (ingressos, Instagram, Maps, Linktree) ficam direto nos
+    href abaixo: e a fonte unica de verdade deles. Assim funcionam sem JS e sao
+    indexaveis. Para trocar uma URL, edite-a aqui. O JS so cuida de comportamento.
+  -->
+  <!-- Fallback do Meta Pixel para navegadores sem JS (par do script no <head>). -->
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=2845090995664154&ev=PageView&noscript=1" /></noscript>
+
+  <!-- Atalho de teclado para o conteudo principal (acessibilidade). -->
   <a class="skip-link" href="#ingressos">Pular para ingressos</a>
+
+  <!-- Camadas de textura global (grao + vinheta), puramente decorativas. -->
   <div class="grain" aria-hidden="true"></div>
   <div class="vignette" aria-hidden="true"></div>
 
@@ -106,7 +132,7 @@
           </div>
 
           <div class="hero__cta reveal">
-            <a href="https://shotgun.live/events/clubypride" target="_blank" rel="noopener" class="btn btn--primary" data-ingresso>Ingressos na Shotgun</a>
+            <a href="https://shotgun.live/events/clubypride" target="_blank" rel="noopener" class="btn btn--primary">Ingressos na Shotgun</a>
             <a href="https://instagram.com/festaclubkids" target="_blank" rel="noopener" class="btn btn--ghost">@festaclubkids</a>
           </div>
         </div>
@@ -146,7 +172,7 @@
       <article class="headliner">
         <figure class="headliner__media headliner__media--portrait reveal">
           <div class="portrait">
-            <img class="portrait__photo" src="./img/vita.jpg" width="194" height="259" alt="Retrato editorial da Vita, cabelo molhado e maquiagem marcante, em close." loading="lazy" decoding="async" />
+            <img class="portrait__photo" src="./img/vita.jpg" width="388" height="518" alt="Retrato editorial da Vita, cabelo molhado e maquiagem marcante, em close." loading="lazy" decoding="async" />
             <img src="./img/star-red.webp" alt="" class="portrait__star" aria-hidden="true" />
           </div>
           <figcaption>Vita. Turnê Vita's House, 2026.</figcaption>
@@ -201,7 +227,7 @@
           <strong class="info__v">18 anos</strong>
           <span class="info__sub">Documento com foto obrigatório</span>
         </div>
-        <a href="https://maps.app.goo.gl/Pem2EJ9BKMXLzgTE9" target="_blank" rel="noopener" data-maps class="info__card info__card--map reveal">
+        <a href="https://maps.app.goo.gl/Pem2EJ9BKMXLzgTE9" target="_blank" rel="noopener" class="info__card info__card--map reveal">
           <span class="info__k">Como chegar</span>
           <strong class="info__v">Abrir no Maps</strong>
           <span class="info__sub">Rota até o Vernissage</span>
@@ -215,7 +241,7 @@
       <div class="tickets__inner reveal">
         <p class="kicker">Vendas pela Shotgun</p>
         <h2 class="tickets__title">Ingressos</h2>
-        <a href="https://shotgun.live/events/clubypride" target="_blank" rel="noopener" class="btn btn--primary btn--xl" data-ingresso>Garantir o seu</a>
+        <a href="https://shotgun.live/events/clubypride" target="_blank" rel="noopener" class="btn btn--primary btn--xl">Garantir o seu</a>
         <p class="tickets__note">Vagas limitadas. Garanta o seu antes que esgote.</p>
       </div>
     </section>
@@ -246,10 +272,10 @@
         <h2 class="sec-head__title">Siga a casa</h2>
       </header>
       <div class="links__grid">
-        <a href="https://shotgun.live/events/clubypride" target="_blank" rel="noopener" class="link-card link-card--accent" data-ingresso>Comprar ingresso<span aria-hidden="true">&rarr;</span></a>
+        <a href="https://shotgun.live/events/clubypride" target="_blank" rel="noopener" class="link-card link-card--accent">Comprar ingresso<span aria-hidden="true">&rarr;</span></a>
         <a href="https://instagram.com/festaclubkids" target="_blank" rel="noopener" class="link-card">Instagram<span aria-hidden="true">&rarr;</span></a>
         <a href="https://linktr.ee/festaclubkids" target="_blank" rel="noopener" class="link-card">Linktree<span aria-hidden="true">&rarr;</span></a>
-        <a href="https://maps.app.goo.gl/Pem2EJ9BKMXLzgTE9" target="_blank" rel="noopener" class="link-card" data-maps>Localização no Maps<span aria-hidden="true">&rarr;</span></a>
+        <a href="https://maps.app.goo.gl/Pem2EJ9BKMXLzgTE9" target="_blank" rel="noopener" class="link-card">Localização no Maps<span aria-hidden="true">&rarr;</span></a>
       </div>
     </section>
 
@@ -269,7 +295,7 @@
     <p class="footer__tag">Festa eletrônica underground LGBT. Goiânia.</p>
     <nav class="footer__links" aria-label="Links">
       <a href="https://instagram.com/festaclubkids" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://shotgun.live/events/clubypride" target="_blank" rel="noopener" data-ingresso>Ingressos</a>
+      <a href="https://shotgun.live/events/clubypride" target="_blank" rel="noopener">Ingressos</a>
       <a href="#topo">Voltar ao topo</a>
     </nav>
     <div class="footer__sponsor">
@@ -277,9 +303,10 @@
       <img src="./img/jim-beam.webp" alt="Jim Beam" width="700" height="296" loading="lazy" />
     </div>
     <p class="footer__credit">Realização Coletivo Clubkids e La Princess Mila. Ingressos Shotgun.</p>
-    <p class="footer__powered">Powered by <a href="https://github.com/vittorccf" target="_blank" rel="noopener">@vittorccf</a></p>
+    <p class="footer__powered">Powered by <span>@vittorccf</span></p>
   </footer>
 
+  <!-- Entrypoint da aplicacao: importa os estilos e inicia as interacoes. -->
   <script type="module" src="./src/main.js"></script>
 </body>
 </html>

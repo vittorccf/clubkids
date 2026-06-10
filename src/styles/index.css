@@ -1,0 +1,18 @@
+/* ============================================================
+   FOLHA DE ESTILO PRINCIPAL . Club Kids / Cluby Pride
+   ------------------------------------------------------------
+   Ponto de entrada do CSS. Apenas orquestra os parciais na
+   ordem correta de cascata (do mais generico ao mais especifico).
+   O Vite concatena tudo em um unico arquivo no build, entao nao
+   ha custo de requisicoes extras em producao.
+
+     tokens     -> variaveis de design (cores, fontes, escala)
+     base       -> reset, elementos globais, a11y, textura
+     utilities  -> classes reaproveitaveis (botoes, reveal, ...)
+     sections   -> estilos especificos de cada bloco da pagina
+   ============================================================ */
+
+@import "./tokens.css";
+@import "./base.css";
+@import "./utilities.css";
+@import "./sections.css";

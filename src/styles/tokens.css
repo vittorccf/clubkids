@@ -1,0 +1,43 @@
+/* ============================================================
+   DESIGN TOKENS . Club Kids / Cluby Pride . Vita's House
+   ------------------------------------------------------------
+   Fonte unica de verdade do sistema visual. Todo valor de cor,
+   tipografia e espacamento usado no site nasce daqui, como CSS
+   custom properties. Mudar a identidade = mudar este arquivo.
+
+   Conceito: a casa da Vita em preto e branco. Cartaz de revista
+   cult escaneado, grao pesado, alto contraste. A unica cor que
+   pulsa e a estrela vermelha do logo.
+   ============================================================ */
+
+:root {
+  /* --- Superficies (do mais escuro ao filete) --- */
+  --bg:    #0B0B0B; /* fundo base */
+  --bg-2:  #161616; /* fundo elevado (cards, molduras) */
+  --line:  #2A2A2A; /* filetes e divisores */
+
+  /* --- Tinta (texto) --- */
+  --ink:   #F4F2EC; /* branco revista, texto principal */
+  --muted: #9A968C; /* cinza de legenda, texto secundario */
+
+  /* --- Acento unico de cor --- */
+  --red:      #E8193F; /* estrela e detalhes graficos */
+  --red-text: #FF3355; /* vermelho para texto pequeno (garante contraste AA) */
+
+  /* --- Tipografia --- */
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif; /* titulos/cartaz */
+  --font-text:    "Inter", system-ui, -apple-system, sans-serif;         /* texto/UI */
+
+  /* --- Escala tipografica fluida (clamp: min, preferido, max) --- */
+  --step--1: clamp(.74rem, .7rem + .2vw, .85rem);   /* legendas, labels */
+  --step-0:  clamp(1rem, .96rem + .2vw, 1.12rem);    /* corpo de texto */
+  --step-1:  clamp(1.2rem, 1.05rem + .7vw, 1.6rem);  /* subtitulos */
+  --step-2:  clamp(1.7rem, 1.3rem + 1.9vw, 2.8rem);  /* titulos de secao */
+  --step-3:  clamp(2.4rem, 1.5rem + 4vw, 4.6rem);    /* titulos grandes */
+  --display: clamp(3rem, 1rem + 14vw, 9.5rem);       /* display do hero */
+
+  /* --- Espacamento e forma --- */
+  --gut: clamp(1.1rem, 4vw, 2.5rem); /* gutter lateral responsivo */
+  --sec: clamp(4rem, 10vw, 8.5rem);  /* respiro vertical entre secoes */
+  --r: 4px;                          /* raio de borda padrao */
+}
