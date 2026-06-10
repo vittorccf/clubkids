@@ -45,6 +45,10 @@ fly.save(os.path.join(IMG, "flyer.jpg"), "JPEG", quality=86, optimize=True, prog
 print("flyer.jpg", fly.size)
 
 # ---------- 3. Galeria (resize; o P&B e aplicado por CSS) ----------
+# Fotos 01-09 vem das pastas locais em ../references (abaixo). As fotos
+# 10-14 (edicao Cluby Love) foram baixadas do album publico no Google Drive
+# (linktr.ee/festaclubkids -> "FOTOS CLUBYLOVE") e ja estao otimizadas em
+# public/img, entao nao sao reprocessadas aqui.
 gallery = [
     ("CLUB KIDS!_/CLUBKIDS 02.08.25/EQ9A6890.jpg", "01-retrato.jpg"),
     ("CLUB KIDS!_/CLUB KIDS 16.08L25/_2EQ9A8240_2.jpg", "02-crowd.jpg"),
