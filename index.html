@@ -104,6 +104,20 @@
       <span>Club Kids</span>
     </a>
     <nav class="nav__links" aria-label="Navegação principal">
+      <button type="button" class="sound-toggle" data-sound-toggle aria-pressed="false" aria-label="Tocar trilha sonora" title="Som">
+        <!-- Alto-falante (visível quando pausado/mudo). -->
+        <svg class="sound-toggle__icon sound-toggle__icon--muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 9v6h4l5 4V5L8 9H4z" />
+          <line x1="16" y1="9" x2="22" y2="15" />
+          <line x1="22" y1="9" x2="16" y2="15" />
+        </svg>
+        <!-- Alto-falante com ondas (visível quando tocando). -->
+        <svg class="sound-toggle__icon sound-toggle__icon--on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 9v6h4l5 4V5L8 9H4z" />
+          <path d="M16 8.5a5 5 0 0 1 0 7" />
+          <path d="M18.5 6a8.5 8.5 0 0 1 0 12" />
+        </svg>
+      </button>
       <a href="#vita">Vita</a>
       <a href="#local">Local</a>
       <a href="#galeria">Edições</a>
@@ -311,6 +325,9 @@
     <p class="footer__credit">Realização Coletivo Clubkids e La Princess Mila. Ingressos Shotgun.</p>
     <p class="footer__powered">Powered by <span>@vittorccf</span></p>
   </footer>
+
+  <!-- Trilha sonora da edição (Vita). Toca a 25% ao acessar; controlada pelo botão de som na nav. -->
+  <audio data-audio src="./audio/vita-20k.mp3" loop preload="auto"></audio>
 
   <!-- Entrypoint da aplicacao: importa os estilos e inicia as interacoes. -->
   <script type="module" src="./src/main.js"></script>

@@ -32,3 +32,9 @@ export const NAV = {
   /** Rolagem (px) a partir da qual a nav ganha fundo (estado .is-stuck). */
   stuckOffset: 40,
 }
+
+/** Parametros da trilha sonora. */
+export const AUDIO = {
+  /** Volume inicial da faixa (0 a 1). 0.25 = 25%. */
+  volume: 0.25,
+}

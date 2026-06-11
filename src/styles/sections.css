@@ -20,6 +20,17 @@
 /* No mobile some todo link de texto, mantendo so o CTA de ingressos. */
 @media (max-width: 640px) { .nav__links a:not(.nav__cta) { display: none; } }
 
+/* Botao de som: alterna a trilha sonora. Icone opaco que acende ao tocar. */
+.sound-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; padding: 0; color: var(--ink); background: transparent; border: 1px solid transparent; border-radius: 999px; cursor: pointer; opacity: .55; transition: opacity .2s, border-color .2s, color .2s; }
+.sound-toggle:hover { opacity: 1; }
+.sound-toggle:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.sound-toggle.is-playing { opacity: 1; color: var(--red); border-color: var(--line); }
+.sound-toggle__icon { width: 22px; height: 22px; }
+/* Mostra o icone certo conforme o estado (pausado mostra mudo; tocando mostra ondas). */
+.sound-toggle__icon--on { display: none; }
+.sound-toggle.is-playing .sound-toggle__icon--muted { display: none; }
+.sound-toggle.is-playing .sound-toggle__icon--on { display: block; }
+
 /* ===== HERO (primeira dobra: titulo, contador, CTAs e flyer) ===== */
 .hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding: clamp(5rem,12vh,7rem) var(--gut) 2rem; position: relative; }
 .hero__grid { display: grid; grid-template-columns: 1fr; gap: clamp(1.8rem, 5vw, 3.5rem); align-items: center; max-width: 1200px; margin: 0 auto; width: 100%; }
