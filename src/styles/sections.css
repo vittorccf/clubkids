@@ -125,37 +125,17 @@
 .vip__lead strong { font-weight: 700; }
 .vip__tags { margin-top: 1.4rem; }
 
-/* Formulario: campos empilhados, estetica de filete sobre fundo elevado. */
-.vip-form { display: flex; flex-direction: column; gap: 1.4rem; }
-.vip-field { display: flex; flex-direction: column; gap: .45rem; }
-.vip-field label { font-size: var(--step--1); text-transform: uppercase; letter-spacing: .18em; color: var(--muted); }
-.vip-field__hint { text-transform: none; letter-spacing: 0; font-style: italic; }
-.vip-field input {
-  width: 100%; padding: .9rem 1rem; color: var(--ink); background: var(--bg-2);
-  border: 1px solid var(--line); border-radius: var(--r);
-  font-family: var(--font-text); font-size: var(--step-0); line-height: 1.2;
-  transition: border-color .2s, background .2s;
+/* CTA de acesso a lista: o form oficial exige login (nao da para incorporar),
+   entao abrimos em nova aba a partir deste cartao, no estilo da secao de
+   ingressos. Card de fundo elevado com filete, centralizando o botao. */
+.vip-cta {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 1.4rem;
+  padding: clamp(1.6rem, 4vw, 2.6rem);
+  background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--r);
 }
-.vip-field input::placeholder { color: var(--muted); opacity: .6; }
-.vip-field input:hover { border-color: #3a3a3a; }
-.vip-field input:focus { outline: none; border-color: var(--ink); background: #1b1b1b; }
-.vip-field input:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
-/* Sinaliza campo invalido so depois de o usuario tentar enviar (classe do JS). */
-.vip-form.is-validated input:invalid { border-color: var(--red); }
-.vip-field__help { font-size: var(--step--1); color: var(--muted); }
-.vip-field__help strong { color: var(--ink); font-weight: 700; }
-
-.vip-form__submit { width: 100%; margin-top: .4rem; }
-.vip-form__submit[disabled] { opacity: .6; cursor: progress; }
-
-.vip-form__msg { font-size: var(--step-0); padding: .9rem 1rem; border: 1px solid var(--line); border-radius: var(--r); }
-.vip-form__msg--ok { color: var(--ink); border-color: var(--ink); }
-.vip-form__msg--err { color: var(--red-text); border-color: var(--red); }
-.vip-form__msg--err a { text-decoration: underline; }
-.vip-form__note { font-size: var(--step--1); color: var(--muted); text-align: center; }
-
-/* iframe-alvo do fallback sem JS: ocupa zero espaco, fora do fluxo. */
-.vip-form__sink { position: absolute; width: 0; height: 0; border: 0; left: -9999px; }
+.vip-cta__fields { font-size: var(--step-0); color: var(--ink); max-width: 46ch; }
+.vip-cta__btn { width: 100%; }
+.vip-cta__note { font-size: var(--step--1); color: var(--muted); }
 
 /* A partir de 820px: intro a esquerda, formulario a direita. */
 @media (min-width: 820px) {
