@@ -121,6 +121,7 @@
       </button>
       <a href="#vita">Vita</a>
       <a href="#local">Local</a>
+      <a href="#lista">Lista</a>
       <a href="#galeria">Edições</a>
       <a href="#ingressos" class="nav__cta">Ingressos</a>
     </nav>
@@ -261,10 +262,93 @@
       </div>
     </section>
 
+    <!-- LISTA T/NB & PCD (acesso VIP) -->
+    <section class="vip" id="lista">
+      <header class="sec-head reveal">
+        <span class="sec-head__num">03</span>
+        <h2 class="sec-head__title">Lista T/NB &amp; PCD</h2>
+      </header>
+
+      <div class="vip__grid">
+        <div class="vip__intro reveal">
+          <p class="vip__lead">
+            Lista de acesso ao <strong>VIP</strong> para pessoas trans, não-binárias e PCD.
+            Idealizada e produzida por uma travesti preta. Preencha os dados e ajude a
+            divulgar. Quanto mais gente, mais forte a casa.
+          </p>
+          <ul class="genre-tags vip__tags">
+            <li>Lista T/NB</li><li>Lista PCD</li><li>Acesso VIP</li>
+          </ul>
+        </div>
+
+        <!--
+          Formulario nativo que posta direto no Google Forms (os dados caem na
+          mesma planilha do form original). action/method abaixo sao a fonte de
+          verdade do envio: funcionam mesmo sem JS. O modulo form-list.js so
+          intercepta para enviar sem sair da pagina e mostrar o sucesso.
+          name="entry.XXXX" e o ID real de cada campo no Google Forms.
+        -->
+        <form
+          class="vip-form reveal"
+          data-vip-form
+          action="https://docs.google.com/forms/d/e/1FAIpQLSfJIH8jUQgg9qMdYKkDo3Gd7hRGi8isH3KFSW2QPVXVBwNE7g/formResponse"
+          method="post"
+          target="vip-form-sink"
+        >
+          <div class="vip-field">
+            <label for="vip-nome">Nome <span class="vip-field__hint">(social ou registro)</span></label>
+            <input id="vip-nome" name="entry.1882667087" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="vip-field">
+            <label for="vip-insta">Instagram</label>
+            <input id="vip-insta" name="entry.1195891686" type="text" inputmode="text" placeholder="@seuusuario" autocomplete="off" required />
+          </div>
+
+          <div class="vip-field">
+            <label for="vip-zap">WhatsApp</label>
+            <input id="vip-zap" name="entry.430332817" type="tel" inputmode="tel" placeholder="(62) 90000-0000" autocomplete="tel" required />
+          </div>
+
+          <div class="vip-field">
+            <label for="vip-email">E-mail</label>
+            <input id="vip-email" name="emailAddress" type="email" inputmode="email" placeholder="voce@email.com" autocomplete="email" required />
+          </div>
+
+          <div class="vip-field">
+            <label for="vip-ident">Como você se identifica?</label>
+            <input id="vip-ident" name="entry.191344186" type="text" placeholder="ex.: transmasculino" required />
+            <span class="vip-field__help">Lista T/NB. Se você é cis, escreva <strong>cis</strong>.</span>
+          </div>
+
+          <div class="vip-field">
+            <label for="vip-pcd">Condição / deficiência</label>
+            <input id="vip-pcd" name="entry.1949524122" type="text" placeholder="informe sua condição" required />
+            <span class="vip-field__help">Lista PCD. Se não se aplica, escreva <strong>nenhuma</strong>.</span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--xl vip-form__submit" data-vip-submit>Entrar na lista</button>
+
+          <!-- Mensagens de retorno (controladas pelo JS). -->
+          <p class="vip-form__msg vip-form__msg--ok" data-vip-ok hidden role="status">
+            Tudo certo! Seu nome está na lista. Nos vemos na pista.
+          </p>
+          <p class="vip-form__msg vip-form__msg--err" data-vip-err hidden role="alert">
+            Não rolou enviar agora. Tente de novo ou use o
+            <a href="https://forms.gle/59xfPQQaRs28AFUh8" target="_blank" rel="noopener">formulário no Google</a>.
+          </p>
+          <p class="vip-form__note">Seus dados vão só para a organização da festa.</p>
+        </form>
+      </div>
+
+      <!-- Destino do POST quando o JS nao roda: evita sair da pagina. -->
+      <iframe name="vip-form-sink" title="" aria-hidden="true" tabindex="-1" class="vip-form__sink"></iframe>
+    </section>
+
     <!-- GALERIA -->
     <section class="gallery" id="galeria">
       <header class="sec-head reveal">
-        <span class="sec-head__num">03</span>
+        <span class="sec-head__num">04</span>
         <h2 class="sec-head__title">Edições anteriores</h2>
       </header>
       <div class="gallery__grid">
@@ -289,7 +373,7 @@
     <!-- LINKS -->
     <section class="links" id="links">
       <header class="sec-head reveal">
-        <span class="sec-head__num">04</span>
+        <span class="sec-head__num">05</span>
         <h2 class="sec-head__title">Siga a casa</h2>
       </header>
       <div class="links__grid">

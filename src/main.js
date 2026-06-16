@@ -16,8 +16,10 @@ import { initCountdown } from './modules/countdown.js'
 import { initScrollReveal } from './modules/scroll-reveal.js'
 import { initStickyNav } from './modules/sticky-nav.js'
 import { initAudioPlayer } from './modules/audio-player.js'
+import { initFormList } from './modules/form-list.js'
 
 initCountdown()    // contador regressivo do hero
 initScrollReveal() // animacoes de entrada ao rolar
 initStickyNav()    // fundo da nav ao rolar
 initAudioPlayer()  // trilha sonora + botao de som
+initFormList()     // envio do formulario da lista VIP
