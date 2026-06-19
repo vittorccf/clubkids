@@ -16,7 +16,7 @@ export const EVENT = {
    * Data e hora de abertura dos portoes, em ISO 8601 com fuso de Brasilia (-03:00).
    * Alvo do contador regressivo. Deve bater com o startDate do JSON-LD no index.html.
    */
-  startsAt: '2026-06-20T22:00:00-03:00',
+  startsAt: '2026-07-03T22:00:00-03:00',
 }
 
 /** Parametros das animacoes de entrada (scroll reveal). */

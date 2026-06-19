@@ -2,7 +2,7 @@
 
 Landing page de divulgação (one-page) da edição **Cluby Pride + Vita's House** da Club Kids Goiânia. Estética de cartaz de revista em preto e branco, grão pesado e a estrela vermelha como único acento de cor.
 
-- **Quando:** sábado, 20 de junho de 2026, das 22h às 06h
+- **Quando:** sexta-feira, 3 de julho de 2026, das 22h às 06h
 - **Onde:** Vernissage Club, Praça do Cruzeiro, 121, Setor Sul, Goiânia GO
 - **Atração principal:** Vita (turnê Vita's House) . **Headliner:** Rafael Rosa
 - **Classificação:** 18+
